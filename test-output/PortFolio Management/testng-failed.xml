@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [PortFolio Management]">
+  <listeners>
+    <listener class-name="listeners.MyTestNGListener"/>
+  </listeners>
+  <test name="Delete Portfolio Test(failed)">
+    <classes>
+      <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="quit"/>
+          <include name="quit"/>
+          <include name="deletePortfolio" invocation-numbers="0"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
+    </classes>
+  </test> <!-- Delete Portfolio Test(failed) -->
+</suite> <!-- Failed suite [PortFolio Management] -->

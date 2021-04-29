@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="15" failed="3" total="21" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Stock Suite" duration-ms="123679" started-at="2021-04-28T13:02:59Z" finished-at="2021-04-28T13:05:03Z">
+    <groups>
+    </groups>
+    <test name="Modify Stock-Sell Existing Stock" duration-ms="91395" started-at="2021-04-28T13:02:59Z" finished-at="2021-04-28T13:04:31Z">
+      <class name="com.rediff.ddf.newtestcases.StockManagement">
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@ea4a92b]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2021-04-28T09:04:23Z" finished-at="2021-04-28T09:04:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5c14b3da]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="verifyStockPresent()[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@ea4a92b]" name="verifyStockPresent" duration-ms="174" started-at="2021-04-28T09:04:23Z" finished-at="2021-04-28T09:04:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStockPresent -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@ea4a92b]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2021-04-28T09:04:23Z" finished-at="2021-04-28T09:04:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5c14b3da]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="modifyStock(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@ea4a92b]" name="modifyStock" duration-ms="1492" started-at="2021-04-28T09:04:23Z" finished-at="2021-04-28T09:04:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sellstock]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@5c14b3da]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <td>...</td> is not clickable at point (166, 631). Other element would receive the click: <div id="MainDv" class="MainDv" style="display: block; height: 1214px; width: 100%;"></div>
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-TKK5GPG', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\HARSIM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54596}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 62d1884432d7e27dbc2d3cf8d690efd1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <td>...</td> is not clickable at point (166, 631). Other element would receive the click: <div id="MainDv" class="MainDv" style="display: block; height: 1214px; width: 100%;"></div>
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-TKK5GPG', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\HARSIM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54596}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 62d1884432d7e27dbc2d3cf8d690efd1
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:238)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
+	at com.rediff.ddf.base.ApplicationKeywords.goToBuySell(ApplicationKeywords.java:95)
+	at com.rediff.ddf.newtestcases.StockManagement.modifyStock(StockManagement.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:753)
+	at org.testng.TestRunner.run(TestRunner.java:607)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:402)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- modifyStock -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@ea4a92b]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2021-04-28T09:04:25Z" finished-at="2021-04-28T09:04:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5c14b3da]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="verifyStockQuantity(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@ea4a92b]" name="verifyStockQuantity" duration-ms="1111" started-at="2021-04-28T09:04:25Z" finished-at="2021-04-28T09:04:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sellstock]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@5c14b3da]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+	Quantity did not match]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+	Quantity did not match
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at com.rediff.ddf.base.GenericKeywords.assertAll(GenericKeywords.java:217)
+	at com.rediff.ddf.base.GenericKeywords.reportFailure(GenericKeywords.java:212)
+	at com.rediff.ddf.newtestcases.StockManagement.verifyStockQuantity(StockManagement.java:145)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:753)
+	at org.testng.TestRunner.run(TestRunner.java:607)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:402)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStockQuantity -->
+        <test-method status="SKIP" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@ea4a92b]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2021-04-28T09:04:26Z" finished-at="2021-04-28T09:04:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5c14b3da]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Critical Failure in Prevoius Tests]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Critical Failure in Prevoius Tests
+	at com.rediff.ddf.base.BaseTest.beforeMethod(BaseTest.java:98)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:216)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:590)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:753)
+	at org.testng.TestRunner.run(TestRunner.java:607)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:402)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="verifyTransactionHistory(java.lang.String)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@ea4a92b]" name="verifyTransactionHistory" duration-ms="0" started-at="2021-04-28T09:04:26Z" finished-at="2021-04-28T09:04:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sellstock]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTransactionHistory -->
+      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
+      <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
+        <test-method status="PASS" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@1b40d5f0]" name="beforeTest" is-config="true" duration-ms="56379" started-at="2021-04-28T09:02:59Z" finished-at="2021-04-28T09:03:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5c14b3da]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="createPortfolio(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@1b40d5f0]" name="createPortfolio" duration-ms="3405" started-at="2021-04-28T09:03:56Z" finished-at="2021-04-28T09:03:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5c14b3da]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPortfolio -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@1b40d5f0]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2021-04-28T09:03:56Z" finished-at="2021-04-28T09:03:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5c14b3da]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@1b40d5f0]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2021-04-28T09:03:59Z" finished-at="2021-04-28T09:03:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5c14b3da]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="deletePortfolio(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@1b40d5f0]" name="deletePortfolio" duration-ms="20108" started-at="2021-04-28T09:03:59Z" finished-at="2021-04-28T09:04:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5c14b3da]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Cannot locate option with text: Abc23336
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-TKK5GPG', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate option with text: Abc23336
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-TKK5GPG', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151)
+	at com.rediff.ddf.base.GenericKeywords.selectByVisibleText(GenericKeywords.java:118)
+	at com.rediff.ddf.newtestcases.PortfolioManagement.deletePortfolio(PortfolioManagement.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:753)
+	at org.testng.TestRunner.run(TestRunner.java:607)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:402)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletePortfolio -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@1b40d5f0]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2021-04-28T09:04:19Z" finished-at="2021-04-28T09:04:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5c14b3da]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="selectPortfolio(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@1b40d5f0]" name="selectPortfolio" duration-ms="3715" started-at="2021-04-28T09:04:19Z" finished-at="2021-04-28T09:04:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5c14b3da]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectPortfolio -->
+        <test-method status="PASS" signature="quit(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@1b40d5f0]" name="quit" is-config="true" duration-ms="4921" started-at="2021-04-28T09:04:26Z" finished-at="2021-04-28T09:04:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5c14b3da]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
+    </test> <!-- Modify Stock-Sell Existing Stock -->
+    <test name="Modify Stock-Buy Existing Stock" duration-ms="123679" started-at="2021-04-28T13:02:59Z" finished-at="2021-04-28T13:05:03Z">
+      <class name="com.rediff.ddf.newtestcases.StockManagement">
+        <test-method status="SKIP" signature="verifyStockPresent()[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@11531931]" name="verifyStockPresent" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStockPresent -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@11531931]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1b800c89]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="modifyStock(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@11531931]" name="modifyStock" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[addstock]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@1b800c89]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- modifyStock -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@11531931]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1b800c89]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@11531931]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1b800c89]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="verifyStockQuantity(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@11531931]" name="verifyStockQuantity" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[addstock]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@1b800c89]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStockQuantity -->
+        <test-method status="SKIP" signature="verifyTransactionHistory(java.lang.String)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@11531931]" name="verifyTransactionHistory" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[addstock]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTransactionHistory -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@11531931]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1b800c89]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
+      <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
+        <test-method status="FAIL" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@4563e9ab]" name="beforeTest" is-config="true" duration-ms="0" started-at="2021-04-28T09:02:59Z" finished-at="2021-04-28T09:02:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1b800c89]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#useremail"}
+  (Session info: chrome=90.0.4430.85)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-TKK5GPG', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\HARSIM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54597}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d1b1c10d476ed502560dfb3bab2de5a
+*** Element info: {Using=css selector, value=#useremail}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#useremail"}
+  (Session info: chrome=90.0.4430.85)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-TKK5GPG', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\HARSIM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54597}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d1b1c10d476ed502560dfb3bab2de5a
+*** Element info: {Using=css selector, value=#useremail}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:332)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:477)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:312)
+	at com.rediff.ddf.base.GenericKeywords.getElement(GenericKeywords.java:139)
+	at com.rediff.ddf.base.GenericKeywords.type(GenericKeywords.java:104)
+	at com.rediff.ddf.base.ApplicationKeywords.defaultLogin(ApplicationKeywords.java:42)
+	at com.rediff.ddf.base.BaseTest.beforeTest(BaseTest.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:216)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:143)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:631)
+	at org.testng.TestRunner.run(TestRunner.java:599)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:402)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="SKIP" signature="createPortfolio(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@4563e9ab]" name="createPortfolio" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1b800c89]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPortfolio -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@4563e9ab]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1b800c89]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@4563e9ab]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1b800c89]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="deletePortfolio(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@4563e9ab]" name="deletePortfolio" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1b800c89]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletePortfolio -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@4563e9ab]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1b800c89]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="selectPortfolio(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@4563e9ab]" name="selectPortfolio" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1b800c89]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectPortfolio -->
+        <test-method status="PASS" signature="quit(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@4563e9ab]" name="quit" is-config="true" duration-ms="164" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@1b800c89]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
+    </test> <!-- Modify Stock-Buy Existing Stock -->
+    <test name="Add New Stock-New Stock" duration-ms="123677" started-at="2021-04-28T13:02:59Z" finished-at="2021-04-28T13:05:03Z">
+      <class name="com.rediff.ddf.newtestcases.StockManagement">
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@7cdbc5d3]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@ac5145e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@7cdbc5d3]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@ac5145e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="addNewStock(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@7cdbc5d3]" name="addNewStock" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@ac5145e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addNewStock -->
+        <test-method status="SKIP" signature="verifyStockPresent()[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@7cdbc5d3]" name="verifyStockPresent" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStockPresent -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@7cdbc5d3]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@ac5145e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="verifyStockQuantity(java.lang.String, org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@7cdbc5d3]" name="verifyStockQuantity" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[addstock]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@ac5145e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStockQuantity -->
+        <test-method status="SKIP" signature="verifyTransactionHistory(java.lang.String)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@7cdbc5d3]" name="verifyTransactionHistory" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[addstock]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTransactionHistory -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.StockManagement@7cdbc5d3]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@ac5145e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
+      <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
+        <test-method status="FAIL" signature="beforeTest(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@7006c658]" name="beforeTest" is-config="true" duration-ms="0" started-at="2021-04-28T09:02:59Z" finished-at="2021-04-28T09:02:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@ac5145e]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#useremail"}
+  (Session info: chrome=90.0.4430.85)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-TKK5GPG', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\HARSIM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54598}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2c8d1c3b7bee9e0447306d8b75c06d54
+*** Element info: {Using=css selector, value=#useremail}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#useremail"}
+  (Session info: chrome=90.0.4430.85)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-7', revision: 'de8579b6d5'
+System info: host: 'DESKTOP-TKK5GPG', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\HARSIM~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:54598}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2c8d1c3b7bee9e0447306d8b75c06d54
+*** Element info: {Using=css selector, value=#useremail}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:123)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:501)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:332)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:477)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:312)
+	at com.rediff.ddf.base.GenericKeywords.getElement(GenericKeywords.java:139)
+	at com.rediff.ddf.base.GenericKeywords.type(GenericKeywords.java:104)
+	at com.rediff.ddf.base.ApplicationKeywords.defaultLogin(ApplicationKeywords.java:42)
+	at com.rediff.ddf.base.BaseTest.beforeTest(BaseTest.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:216)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:143)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:631)
+	at org.testng.TestRunner.run(TestRunner.java:599)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:402)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="SKIP" signature="createPortfolio(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@7006c658]" name="createPortfolio" duration-ms="1" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@ac5145e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPortfolio -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@7006c658]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@ac5145e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@7006c658]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@ac5145e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="deletePortfolio(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@7006c658]" name="deletePortfolio" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@ac5145e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletePortfolio -->
+        <test-method status="SKIP" signature="selectPortfolio(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@7006c658]" name="selectPortfolio" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@ac5145e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectPortfolio -->
+        <test-method status="PASS" signature="beforeMethod(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@7006c658]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@ac5145e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="quit(org.testng.ITestContext)[pri:0, instance:com.rediff.ddf.newtestcases.PortfolioManagement@7006c658]" name="quit" is-config="true" duration-ms="162" started-at="2021-04-28T09:05:03Z" finished-at="2021-04-28T09:05:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@ac5145e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
+    </test> <!-- Add New Stock-New Stock -->
+  </suite> <!-- Stock Suite -->
+</testng-results>

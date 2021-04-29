@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Stock Management]">
+  <parameter name="action" value="addstock"/>
+  <test name="Add new Stock test(failed)">
+    <parameter name="action" value="addstock"/>
+    <classes>
+      <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="quit"/>
+          <include name="deletePortfolio" invocation-numbers="0"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
+    </classes>
+  </test> <!-- Add new Stock test(failed) -->
+</suite> <!-- Failed suite [Stock Management] -->
