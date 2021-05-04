@@ -11,7 +11,7 @@ public class PortfolioManagement extends BaseTest {
 	@Test
 	public void createPortfolio(ITestContext context) {
 		////JSONObject data = (JSONObject)context.getAttribute("data");
-		String portfolioName= "Ashi_11";
+		String portfolioName= "Abc12121212125";
 		////(String)data.get("portfolioname");
 
 		app.log("Creating Profolio");
@@ -27,7 +27,7 @@ public class PortfolioManagement extends BaseTest {
 	@Test
 	public void deletePortfolio(ITestContext context) {
 	//	JSONObject data = (JSONObject)context.getAttribute("data");
-		String portfolioName= "Abc23336";
+		String portfolioName= "Abc12121212125";
 		app.log("Deleting Profolio");
         app.selectByVisibleText("portfolioid_dropdown_id", portfolioName);
          app.waitForPageToLoad();
@@ -52,10 +52,15 @@ public class PortfolioManagement extends BaseTest {
 	public void selectPortfolio(ITestContext context) {
 		
 	//	JSONObject data = (JSONObject)context.getAttribute("data");
+		
+	   	System.out.println("-------------------------------select portfolio----------------------------------------");
+
 
 		String portfolioName="Ashi_11";		
-		app.log("Selecting Profolio");
+		app.log("Selecting Profolio "+portfolioName);
 		app.selectByVisibleText("portfolioid_dropdown_id", portfolioName);
+		app.log("done ");
+
 	}
 
 }

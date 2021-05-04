@@ -114,8 +114,15 @@ public class GenericKeywords {
 	}
 	
 	public void selectByVisibleText(String locatorKey, String data) {
+		wait(5);
 		Select s = new Select(getElement(locatorKey));
+		
+		System.out.println("Element present  here "+locatorKey);
+
+	    
 		s.selectByVisibleText(data);
+		System.out.println("Element  present  here as well "+locatorKey);
+
 	}
 	
 	
@@ -137,6 +144,8 @@ public String getText(String locatorKey) {
 		}
 			
 		WebElement e = driver.findElement(getLocator(locatorKey));
+		System.out.println("Element was present "+locatorKey);
+
 		
 		return e;
 	}
@@ -233,7 +242,7 @@ public String getText(String locatorKey) {
 		//test.info("Screenshot-> "+ test.addScreenCaptureFromPath(ExtentManager.screenshotFolderPath+"//"+screenshotFile));
 		
 		
-			 test.info("<p><font color=red>"
+			 test.fail("<p><font color=red>"
                      + " Click the below link or check the latest  report folder named "+ExtentManager.screenshotFolderPath+" and then view the screenshot named "+screenshotFile
                      + "</font></p>", MediaEntityBuilder.createScreenCaptureFromPath(ExtentManager.screenshotFolderPath+"//"+screenshotFile).build());
 

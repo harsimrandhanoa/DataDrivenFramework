@@ -1,102 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Stock Suite]" parallel="tests">
+<suite name="Failed suite [Stock Suite]">
   <parameter name="action" value="addstock"/>
   <parameter name="para1" value="paraval1"/>
-  <test name="Modify Stock-Sell Existing Stock(failed)" parallel="tests">
-    <parameter name="action" value="sellstock"/>
+  <parameter name="iteration" value="1"/>
+  <parameter name="suitename" value="Stock Suite"/>
+  <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//stockdata.json"/>
+  <parameter name="dataflag" value="addfreshstock"/>
+  <listeners>
+    <listener class-name="listeners.MyTestNGListener"/>
+  </listeners>
+  <test name="Add New Stock-New Stock-It.1(failed)">
+    <parameter name="action" value="addstock"/>
     <parameter name="para1" value="paraval1"/>
+    <parameter name="iteration" value="0"/>
+    <parameter name="suitename" value="Stock Suite"/>
+    <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//stockdata.json"/>
+    <parameter name="dataflag" value="addfreshstock"/>
     <classes>
-      <class name="com.rediff.ddf.newtestcases.StockManagement">
-        <methods>
-          <include name="modifyStock" invocation-numbers="0"/>
-          <include name="verifyStockQuantity" invocation-numbers="0"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="verifyTransactionHistory"/>
-        </methods>
-      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
       <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
         <methods>
           <include name="beforeMethod"/>
           <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
           <include name="quit"/>
           <include name="quit"/>
-          <include name="quit"/>
-          <include name="deletePortfolio" invocation-numbers="0"/>
-          <include name="beforeTest"/>
           <include name="beforeTest"/>
           <include name="beforeTest"/>
         </methods>
       </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
-    </classes>
-  </test> <!-- Modify Stock-Sell Existing Stock(failed) -->
-  <test name="Modify Stock-Buy Existing Stock(failed)" parallel="tests">
-    <parameter name="action" value="addstock"/>
-    <parameter name="para1" value="paraval1"/>
-    <classes>
       <class name="com.rediff.ddf.newtestcases.StockManagement">
         <methods>
-          <include name="modifyStock"/>
           <include name="verifyStockQuantity"/>
           <include name="verifyStockPresent"/>
           <include name="beforeMethod"/>
           <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
+          <include name="addNewStock" invocation-numbers="0"/>
           <include name="verifyTransactionHistory"/>
         </methods>
       </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
+    </classes>
+  </test> <!-- Add New Stock-New Stock-It.1(failed) -->
+  <test name="Add New Stock-New Stock-It.2(failed)">
+    <parameter name="action" value="addstock"/>
+    <parameter name="para1" value="paraval1"/>
+    <parameter name="iteration" value="1"/>
+    <parameter name="suitename" value="Stock Suite"/>
+    <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//stockdata.json"/>
+    <parameter name="dataflag" value="addfreshstock"/>
+    <classes>
       <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
         <methods>
           <include name="selectPortfolio"/>
           <include name="beforeMethod"/>
           <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
           <include name="quit"/>
           <include name="quit"/>
-          <include name="quit"/>
-          <include name="createPortfolio"/>
-          <include name="deletePortfolio"/>
-          <include name="beforeTest"/>
           <include name="beforeTest"/>
           <include name="beforeTest"/>
         </methods>
       </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
-    </classes>
-  </test> <!-- Modify Stock-Buy Existing Stock(failed) -->
-  <test name="Add New Stock-New Stock(failed)" parallel="tests">
-    <parameter name="action" value="addstock"/>
-    <parameter name="para1" value="paraval1"/>
-    <classes>
       <class name="com.rediff.ddf.newtestcases.StockManagement">
         <methods>
           <include name="verifyStockQuantity"/>
           <include name="verifyStockPresent"/>
-          <include name="beforeMethod"/>
           <include name="beforeMethod"/>
           <include name="beforeMethod"/>
           <include name="addNewStock"/>
           <include name="verifyTransactionHistory"/>
         </methods>
       </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
-      <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
-        <methods>
-          <include name="selectPortfolio"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="quit"/>
-          <include name="quit"/>
-          <include name="quit"/>
-          <include name="createPortfolio"/>
-          <include name="deletePortfolio"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
     </classes>
-  </test> <!-- Add New Stock-New Stock(failed) -->
+  </test> <!-- Add New Stock-New Stock-It.2(failed) -->
 </suite> <!-- Failed suite [Stock Suite] -->

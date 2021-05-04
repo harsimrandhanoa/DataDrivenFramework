@@ -3,16 +3,19 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
+      <class name="com.rediff.ddf.newtestcases.StockManagement">
         <methods>
-          <include name="selectPortfolio"/>
+          <include name="modifyStock"/>
+          <include name="verifyStockQuantity"/>
+          <include name="verifyStockAvgBuyPrice"/>
+          <include name="verifyStockPresent"/>
           <include name="beforeMethod"/>
+          <include name="addNewStock"/>
           <include name="quit"/>
-          <include name="createPortfolio" invocation-numbers="0"/>
-          <include name="deletePortfolio"/>
+          <include name="verifyTransactionHistory"/>
           <include name="beforeTest"/>
         </methods>
-      </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
+      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

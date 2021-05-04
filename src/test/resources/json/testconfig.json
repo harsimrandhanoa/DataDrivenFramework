@@ -16,7 +16,7 @@
 	 "testdatajsonfile":"data//stockdata.json",
 	 "testdataxlsfile":"xls_data//Data.xlsx",
 	 "suitefilename":"suites//stocksuite.json",
-	 "paralleltests":"Y"
+	 "paralleltests":"N"
 	}
 ]
 

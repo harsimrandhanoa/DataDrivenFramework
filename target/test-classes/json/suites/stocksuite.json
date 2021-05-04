@@ -10,7 +10,7 @@
 		   "executionname":"New Stock",
 		   "dataflag":"addfreshstock",
 		   "parametervalues":["addstock","paraval1"],
-		   "methods":["selectPortFolio","addNewStock","verifyStockPresent","verifyStockQuantity","verifyTransactionHistory"]
+		   "methods":["selectPortfolio","addNewStock","verifyStockPresent","verifyStockQuantity","verifyTransactionHistory"]
 		   }
         ]
     },
@@ -19,14 +19,14 @@
        "parameternames":["action","para1"],
         "executions":[
           {
-           "runmode":"Y",
+           "runmode":"N",
 		   "executionname":"Sell Existing Stock",
 		   "dataflag":"sellexistingstock",
 		   "parametervalues":["sellstock","paraval1"],
 		   "methods":["selectPortFolio","verifyStockPresent","modifyStock","verifyStockPresent","verifyStockQuantity","verifyTransactionHistory"]
 		   },
 		   {
-		   "runmode":"Y",
+		   "runmode":"N",
 		   "executionname":"Buy Existing Stock",
 		   "dataflag":"addexistingstock",
 		   "parametervalues":["addstock","paraval1"],
@@ -36,3 +36,4 @@
     }
    ]
 }
+

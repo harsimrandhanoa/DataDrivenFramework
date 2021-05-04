@@ -1,5 +1,6 @@
 package com.rediff.ddf.newtestcases;
 
+import org.json.simple.JSONObject;
 import org.testng.ITestContext;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -10,20 +11,20 @@ public class StockManagement extends BaseTest {
 	
 	@Test
 	public void addNewStock(ITestContext context) {
-	/////	JSONObject data = (JSONObject)context.getAttribute("data");
-	/*    String companyName = (String)data.get("stockname");
+		JSONObject data = (JSONObject)context.getAttribute("data");
+	    String companyName = (String)data.get("stockname");
 		String selectionDate= (String)data.get("date");// dd-MM-yyyy
 		String stockQuantity=(String)data.get("quantity");
 		String stockPrice=(String)data.get("price");
-		*/
+		
 	   	System.out.println("-------------------------------AddNewStock-----------------------------------------------------------------");
 
 		
 		
-		String companyName = "Birla Corporation Ltd.";
+		/*String companyName = "Birla Corporation Ltd.";
 		String selectionDate="14-12-2020";
 		String stockQuantity="100";
-		String stockPrice="200";
+		String stockPrice="200";*/
 		String companyNameStartWith = companyName.substring(0,10); 
 		
 
@@ -159,6 +160,9 @@ public class StockManagement extends BaseTest {
 	@Parameters ({"action"})
 	@Test
 	public void verifyTransactionHistory(String action) {
+		
+	   	System.out.println("--------------------------------verifyTrasactionHistory-----------------------------------------------------------------");
+
 		
 	
 

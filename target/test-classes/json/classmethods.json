@@ -9,7 +9,7 @@
 		},
 		{
 		 "class":"com.rediff.ddf.newtestcases.PortfolioManagement",
-		 "methods":["createPortfolio","deletePortfolio","selectPortFolio"]
+		 "methods":["createPortfolio","deletePortfolio","selectPortfolio"]
 		},
 		{
 		 "class":"com.rediff.ddf.newtestcases.StockManagement",
