@@ -25,7 +25,6 @@ public class ApplicationKeywords extends ValidationKeywords{
 			fs = new FileInputStream(path);
 			envProp.load(fs);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -33,10 +32,11 @@ public class ApplicationKeywords extends ValidationKeywords{
 		
 	}
 	
-	public void defaultLogin() {
+	public void defaultLogin(String browser) {
+		
 		
 		log("Logging In");
-        openBrowser("Chrome");
+        openBrowser(browser);
         
 		navigate("url");
 		type("username_css", "ashishthakur1983");
@@ -109,11 +109,6 @@ public class ApplicationKeywords extends ValidationKeywords{
 		
 	}
 
-
-
-
-
-	
 	public void setReport(ExtentTest test){
 		this.test  = test;
 	}

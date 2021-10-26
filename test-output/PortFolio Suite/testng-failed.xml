@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [PortFolio Suite]">
+  <parameter name="browser" value="chrome"/>
+  <parameter name="action" value="createport"/>
+  <parameter name="iteration" value="1"/>
+  <parameter name="suitename" value="PortFolio Suite"/>
+  <parameter name="browserName" value="Chrome"/>
+  <parameter name="localpara1" value="localval1"/>
+  <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//portfoliodata.json"/>
+  <parameter name="dataflag" value="deleteportfolio"/>
+  <listeners>
+    <listener class-name="listeners.MyTestNGListener"/>
+  </listeners>
+  <test name="Create Portfolio-Create New PortFolio-pos-It.2-Chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="action" value="createport"/>
+    <parameter name="iteration" value="1"/>
+    <parameter name="suitename" value="PortFolio Suite"/>
+    <parameter name="browserName" value="Chrome"/>
+    <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//portfoliodata.json"/>
+    <parameter name="dataflag" value="createnewportfolio"/>
+    <classes>
+      <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
+        <methods>
+          <include name="quit"/>
+          <include name="quit"/>
+          <include name="quit"/>
+          <include name="quit"/>
+          <include name="createPortfolio"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
+    </classes>
+  </test> <!-- Create Portfolio-Create New PortFolio-pos-It.2-Chrome(failed) -->
+  <test name="Delete Portfolio-Delete Existing PortFolio-It.2-Chrome(failed)">
+    <parameter name="iteration" value="1"/>
+    <parameter name="suitename" value="PortFolio Suite"/>
+    <parameter name="browserName" value="Chrome"/>
+    <parameter name="localpara1" value="localval1"/>
+    <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//portfoliodata.json"/>
+    <parameter name="dataflag" value="deleteportfolio"/>
+    <classes>
+      <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
+        <methods>
+          <include name="quit"/>
+          <include name="quit"/>
+          <include name="quit"/>
+          <include name="quit"/>
+          <include name="deletePortfolio"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
+    </classes>
+  </test> <!-- Delete Portfolio-Delete Existing PortFolio-It.2-Chrome(failed) -->
+</suite> <!-- Failed suite [PortFolio Suite] -->

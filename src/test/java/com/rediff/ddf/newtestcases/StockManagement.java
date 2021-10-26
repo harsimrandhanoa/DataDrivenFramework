@@ -37,12 +37,13 @@ public class StockManagement extends BaseTest {
 
      	app.click("addStock_id");
 		app.type("addstockname_css", companyNameStartWith);
-		app.wait(5);
+		app.threadWait(10);
 		app.clickEnterButton(companyName);
+
 		
 		app.click("stockPurchaseDate_id");
 		app.selectDateFromCalendar(selectionDate);
-		app.wait(5);
+		app.threadWait(5);
 
 		
 		app.type("addstockqty_id", stockQuantity);

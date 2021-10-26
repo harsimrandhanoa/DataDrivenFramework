@@ -19,7 +19,7 @@
        "parameternames":["localpara1"],
 	   "executions":[
 		   {
-		   "runmode":"N",
+		   "runmode":"Y",
 		   "executionname":"Delete Existing PortFolio",
 		   "dataflag":"deleteportfolio",
 		   "parametervalues":["localval1"],

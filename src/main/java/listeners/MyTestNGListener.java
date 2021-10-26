@@ -16,6 +16,8 @@ public class MyTestNGListener implements ITestListener{
 		System.out.println("Test Failed*****************************************> "+result.getName());
 		//test.log(Status.FAIL, result.getThrowable().getMessage());
 		ExtentTest test = (ExtentTest)result.getTestContext().getAttribute("test");
+		 test.log(Status.INFO, " in test falure");
+
 
 		Reporter.getCurrentTestResult().getTestContext().setAttribute("criticalFailure", "Y");
 		ApplicationKeywords app = (ApplicationKeywords)result.getTestContext().getAttribute("app");
@@ -28,7 +30,10 @@ public class MyTestNGListener implements ITestListener{
 	public void onTestSuccess(ITestResult result) {
 		
 		System.out.println("Test passed*****************************************> "+result.getName());
+
 		ExtentTest test = (ExtentTest)result.getTestContext().getAttribute("test");
+		 test.log(Status.INFO, " in test pass");
+
 		test.log(Status.PASS,"Test Passed - "+ result.getName() );
 	}
 	
@@ -36,8 +41,13 @@ public class MyTestNGListener implements ITestListener{
 		
 		System.out.println("Test skipped*****************************************> "+result.getName());
 		
+
+		
 		 String criticalFailure = (String)result.getTestContext().getAttribute("criticalFailure"); 
    	     ExtentTest test = (ExtentTest)result.getTestContext().getAttribute("test");
+   	     
+		 test.log(Status.INFO, " in test skip");
+
 
 		if(criticalFailure!=null && criticalFailure.equals("Y")){
 	 		 test.log(Status.SKIP ,"Test  "+result.getName()+" skipped due to critical failure in previous test");

@@ -11,11 +11,10 @@ public class ReadDataSample {
 		String flagName = "deletestock";
 		int iterationNumber = 1;
 		JSONObject json = new ReadDataSample().excelData(filePath, sheetName, flagName, iterationNumber);
+		System.out.println("--------------------------------------------------------------------------");
 		System.out.println(json);
-		
-		
-		
-	}
+		System.out.println("--------------------------------------------------------------------------");
+		}
 	
 	public JSONObject excelData(String filePath,String sheetName,String flagName,int iterationNumber){
 		ReadExcel readExcel = new ReadExcel(filePath);
@@ -55,5 +54,28 @@ public class ReadDataSample {
 
 		return new JSONObject();
 	}
+
+	public int getTestDataSets(String filePath, String flagName, String sheetName) {
+		
+		ReadExcel readExcel = new ReadExcel(filePath);
+		int flagNumber=0;
+		
+		while(!readExcel.getCellData(sheetName,flagName,flagNumber).equals(flagName)){
+			flagNumber++;
+		}
+		
+		int colStartRowNum = flagNumber+1;
+		int dataStartRowNum = flagNumber+2;
+		int totalRows =0;
+				
+		while(!readExcel.getCellData(sheetName,1,dataStartRowNum).equals("")){
+			  totalRows++;
+			  dataStartRowNum++;
+          }
+			
+		System.out.println("Total rows :"+totalRows);
+		return totalRows;
+			
+     }
 	
 }

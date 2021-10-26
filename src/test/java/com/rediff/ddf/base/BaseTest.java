@@ -17,6 +17,7 @@ import com.aventstack.extentreports.Status;
 
 import reporting.ExtentManager;
 import runner.DataUtil;
+import util.ReadDataSample;
 
 public class BaseTest {
 	public ApplicationKeywords app;
@@ -31,19 +32,24 @@ public class BaseTest {
 		String dataFilePath = context.getCurrentXmlTest().getParameter("datafilepath");
 		String dataFlag = context.getCurrentXmlTest().getParameter("dataflag");
         String iteration = context.getCurrentXmlTest().getParameter("iteration");
-		
-		System.out.println("The filepath  in before test is "+dataFilePath);
-        System.out.println("The iteration in before test is "+dataFlag);
-       System.out.println("The iteration in before test is ----------------------------------->"+iteration);
+        String sheetName = context.getCurrentXmlTest().getParameter("suitename");
+        String browserName = context.getCurrentXmlTest().getParameter("browserName");
         
-       JSONObject data = new DataUtil().getTestData(dataFilePath,dataFlag,Integer.parseInt(iteration));
-       context.setAttribute("data",data);
-        String runmode = (String)data.get("runmode");
-        System.out.println("The runmode is ----------------------------------->"+runmode);
 
+	    JSONObject data = new DataUtil().getTestData(dataFilePath,dataFlag,Integer.parseInt(iteration));
        
-		
-		rep = ExtentManager.getReports();          //made object of rep
+       //To read data from excel
+       
+   //     JSONObject data =    new ReadDataSample().excelData(dataFilePath,sheetName,dataFlag,(Integer.parseInt(iteration)+1));
+        
+        
+        context.setAttribute("data",data);
+
+        
+        String runmode = (String)data.get("runmode");
+
+
+        rep = ExtentManager.getReports();          //made object of rep
 		System.out.println("The name is test is "+context.getCurrentXmlTest().getName());
 		test =rep.createTest(context.getCurrentXmlTest().getName()); //made object of test
 		test.log(Status.INFO, "Starting Test "+context.getCurrentXmlTest().getName());
@@ -55,7 +61,6 @@ public class BaseTest {
 		
 		
 		 if(runmode.equals("N")){
-			System.out.println("Skipping as runmod is N");
 			 
 			 test.log(Status.SKIP,"Skipping as runmod is N");
 			 throw new SkipException("Skipping as runmod is N");
@@ -65,21 +70,20 @@ public class BaseTest {
 		
 		app = new ApplicationKeywords(); // 1 app keyword object for entire test -All @Test
         app.setReport(test); //passed the test  object created above to ApplicationKeywords Class
-		app.defaultLogin();		
         context.setAttribute("app", app); //set object of app
+        app.defaultLogin(browserName);		
 		
  	}
 	
 	@BeforeMethod(alwaysRun = true)
 	public void beforeMethod(ITestContext context) {
-		System.out.println("****Before Method will run before all tests ****");
 
-		
 		String criticalFailure = (String)context.getAttribute("criticalFailure");
 		if(criticalFailure != null && criticalFailure.equals("Y")) {
             throw new SkipException("Critical Failure in Prevoius Tests");// skip in testNG
 		}
-		  //Use these variables set in before test in each method 
+		 
+		//Use these variables set in before test in each method 
 		
 	     app = (ApplicationKeywords)context.getAttribute("app");
 		 test = (ExtentTest)context.getAttribute("test");
@@ -89,7 +93,6 @@ public class BaseTest {
 	
 	@AfterTest(alwaysRun = true)
 	public void quit(ITestContext context) {
-		System.out.println("In the after test");
 
 		app = (ApplicationKeywords)context.getAttribute("app");
 		if(app!=null)
@@ -100,8 +103,5 @@ public class BaseTest {
 		if(rep !=null)
 			rep.flush();
 	}
-
-	
-
 
 }

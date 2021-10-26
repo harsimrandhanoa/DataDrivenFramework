@@ -3,7 +3,7 @@
    "testcases":[
     {
        "name":"Add New Stock",
-       "parameternames":["action","para1"],
+       "parameternames":["action","action2"],
         "executions":[
           {
            "runmode":"Y",
@@ -19,18 +19,18 @@
        "parameternames":["action","para1"],
         "executions":[
           {
-           "runmode":"N",
+           "runmode":"Y",
 		   "executionname":"Sell Existing Stock",
 		   "dataflag":"sellexistingstock",
 		   "parametervalues":["sellstock","paraval1"],
-		   "methods":["selectPortFolio","verifyStockPresent","modifyStock","verifyStockPresent","verifyStockQuantity","verifyTransactionHistory"]
+		   "methods":["selectPortfolio","verifyStockPresent","modifyStock","verifyStockPresent","verifyStockQuantity","verifyTransactionHistory"]
 		   },
 		   {
-		   "runmode":"N",
+		   "runmode":"Y",
 		   "executionname":"Buy Existing Stock",
 		   "dataflag":"addexistingstock",
 		   "parametervalues":["addstock","paraval1"],
-		    "methods":["selectPortFolio","verifyStockPresent","modifyStock","verifyStockPresent","verifyStockQuantity","verifyTransactionHistory"]
+		    "methods":["selectPortfolio","verifyStockPresent","modifyStock","verifyStockPresent","verifyStockQuantity","verifyTransactionHistory"]
 		   }
         ]
     }

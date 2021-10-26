@@ -4,7 +4,7 @@
 	   "flag":"createnewportfolio",
 	    "data":[
 	     {
-	     "portfolioname":"Cat110111112",
+	     "portfolioname":"Catl011111112",
 	     "runmode":"Y"
 	     },
 	     {
@@ -17,7 +17,7 @@
 	   "flag":"deleteportfolio",
 	    "data":[
 	     {
-	     "portfolioname":"Cat110111112",
+	     "portfolioname":"Catl011111112",
 	     "runmode":"Y"
 	     },
 	     {

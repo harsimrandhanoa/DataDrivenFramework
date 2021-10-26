@@ -25,9 +25,4 @@ public class Session extends BaseTest{
 		
 		
 	}
-	
-	/*@Test
-	public void doLogout() {
-	//	test.log(Status.INFO, "Logging out");
-	}*/
-}
+ }

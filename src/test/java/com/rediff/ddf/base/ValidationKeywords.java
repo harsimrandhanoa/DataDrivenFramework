@@ -46,6 +46,7 @@ public class ValidationKeywords extends GenericKeywords {
 		}
 		
 	}
+	
 	public void verifyStockPresent(String companyName) {
 	/*	int row = getRowNumWithCellData("stocktable_css", companyName);
 		if(row ==-1)

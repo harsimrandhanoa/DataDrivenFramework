@@ -19,8 +19,10 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -49,44 +51,56 @@ public class GenericKeywords {
 	public void openBrowser(String browser) {
 		log("Opening The Browser "+ browser);
 		
-		
 		if(prop.get("grid_run").equals("Y")){
-			DesiredCapabilities cap=new DesiredCapabilities();
-			if(browser.equals("Mozilla")){
-				
-				cap.setBrowserName("firefox");
-				cap.setJavascriptEnabled(true);
-				cap.setPlatform(org.openqa.selenium.Platform.WINDOWS);
-				
-			}else if(browser.equals("Chrome")){
-				 cap.setBrowserName("chrome");
-				 cap.setPlatform(org.openqa.selenium.Platform.WINDOWS);
-			}
-			try {
-				// hit the hub
-				driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
-			} catch (Exception e) {
-			  e.printStackTrace();
-			  }
-		   }
+			driver = openBrowserOnGrid(browser);
+	    }
 		  
 		else {
 			
 			if(browser.equals("Chrome")) {
-				System.setProperty("webdriver.chrome.driver", prop.getProperty("chromedriver"));
-				driver = new ChromeDriver();
+				driver  = DriverOptions.getChromeDriver(prop);
+		    
 			}else if(browser.equals("Mozilla")) {
-				System.setProperty("webdriver.gecko.driver", "D:\\Common\\drivers\\geckodriver.exe");
-				driver = new FirefoxDriver();
+				driver  = DriverOptions.getFirefoxDriver(prop);
+			  threadWait(50);
+
 			}else if(browser.equals("Edge")) {
-				System.setProperty("webdriver.edge.driver", "D:\\Common\\msedgedriver.exe");
-				driver = new EdgeDriver();
-			}
+				driver  = DriverOptions.getEdgeDriver(prop);
+            }
 		}
+        threadWait(5);
 		// implicit wait
          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-         driver.manage().window().maximize();
   		//driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+	}
+	
+	public WebDriver openBrowserOnGrid(String browser){
+		log("Tests to be run on selenium grid");
+		ChromeOptions chromeOptions = new ChromeOptions();
+		FirefoxOptions firefoxOptions  = new FirefoxOptions();
+
+
+
+		DesiredCapabilities cap=new DesiredCapabilities();
+		if(browser.equals("Mozilla")){
+			
+			
+		//	driver = new RemoteWebDriver(new URL("http://192.168.56.1:4444/"), firefoxOptions);
+
+			
+		}else if(browser.equals("Chrome")){
+
+			chromeOptions.addArguments("start-maximized");
+			chromeOptions.addArguments("disable-infobards");
+			}
+		try {
+			// hit the hub
+			driver = new RemoteWebDriver(new URL("http://192.168.56.1:4444/"), chromeOptions);
+		} catch (Exception e) {
+		  e.printStackTrace();
+		  }
+		
+		return driver;
 	}
 		
 	public void navigate(String urlKey) {
@@ -110,23 +124,17 @@ public class GenericKeywords {
 	
 	public void clickEnterButton(String locatorText) {
 		log("Clinking enter button");
-		getElementByText(locatorText).click();;
+	//	getElementByText(locatorText).click();;
 	}
 	
 	public void selectByVisibleText(String locatorKey, String data) {
-		wait(5);
+		threadWait(5);
 		Select s = new Select(getElement(locatorKey));
-		
-		System.out.println("Element present  here "+locatorKey);
-
-	    
 		s.selectByVisibleText(data);
-		System.out.println("Element  present  here as well "+locatorKey);
-
-	}
+     }
 	
 	
-public String getText(String locatorKey) {
+    public String getText(String locatorKey) {
 		return getElement(locatorKey).getText();
 	}
 	
@@ -135,19 +143,17 @@ public String getText(String locatorKey) {
 		//  check the presence
 		if(!isElementPresent(locatorKey)) {
 			// report failure
-			System.out.println("Element not present "+locatorKey);
+			log("Element not present "+locatorKey);
 		}
 		//  check the visibility
 		if(!isElementVisible(locatorKey)) {
 			// report failure
-			System.out.println("Element not visible "+locatorKey);
+			log("Element not visible "+locatorKey);
 		}
 			
 		WebElement e = driver.findElement(getLocator(locatorKey));
-		System.out.println("Element was present "+locatorKey);
-
-		
-		return e;
+		     log("Element was present "+locatorKey);
+        return e;
 	}
 	
 	public WebElement getElementByText(String locatorText) {
@@ -158,8 +164,7 @@ public String getText(String locatorKey) {
 		return e;
 	}
 	
-	// true - present
-	// false - not present
+	
 	public boolean isElementPresent(String locatorKey) {
 		log("Checking presence of "+locatorKey);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -172,8 +177,7 @@ public String getText(String locatorKey) {
 		return true;
 	}
 	
-	// true - visible
-	// false - not visible
+	
 	public boolean isElementVisible(String locatorKey) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		try {
@@ -193,7 +197,6 @@ public String getText(String locatorKey) {
 			by = By.xpath(prop.getProperty(locatorKey));
 		else if(locatorKey.endsWith("_css")){
 			by = By.cssSelector(prop.getProperty(locatorKey));
-		System.out.println("The element to find is "+prop.getProperty(locatorKey));	
 		}
 		else if(locatorKey.endsWith("_name"))
 			by = By.name(prop.getProperty(locatorKey));
@@ -207,7 +210,6 @@ public String getText(String locatorKey) {
 	
 	//reporting functions
 	public void log(String msg) {
-		System.out.println(msg);
 		test.log(Status.INFO, msg);
 	}
 	
@@ -257,14 +259,15 @@ public String getText(String locatorKey) {
 	
 	public void acceptAlert(){
 		log("Switching to alert");
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		threadWait(5);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.alertIsPresent());
 		try{
 			driver.switchTo().alert().accept();
 			driver.switchTo().defaultContent();
-			test.log(Status.INFO, "Alert accepted successfully");
+			log("Alert accepted successfully");
 		}catch(Exception e){
-				reportFailure("Alert not found when mandatory",true);
+            reportFailure("Alert not found when mandatory",true);
 		}
 		
 	}
@@ -279,7 +282,6 @@ public String getText(String locatorKey) {
 			List<WebElement> cells = row.findElements(By.tagName("td"));
 			for(int cNum=0;cNum<cells.size();cNum++) {
 				WebElement cell = cells.get(cNum);
-				System.out.println("Text "+ cell.getText());
 				if(!cell.getText().trim().equals(""))
 					if(data.startsWith(cell.getText()))
 						return(rNum+1);
@@ -305,7 +307,7 @@ public String getText(String locatorKey) {
 		if(state.equals("complete"))
 			break;
 		else
-			wait(2);
+			threadWait(2);
 
 		i++;
 		}
@@ -317,14 +319,14 @@ public String getText(String locatorKey) {
 			if(d.longValue() == 0 )
 			 	break;
 			else
-				 wait(2);
+				 threadWait(2);
 			 i++;
 				
 			}
 		
 		}
 	
-	public void wait(int time) {
+	public void threadWait(int time) {
 		try {
 			Thread.sleep(time*1000);
 		} catch (InterruptedException e) {

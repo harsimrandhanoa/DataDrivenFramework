@@ -16,11 +16,12 @@ public class DataUtil {
 
 	public Map<String,String> loadClassMethods() throws FileNotFoundException, IOException, ParseException{
 		
-		String path=System.getProperty("user.dir")+"//src//test//resources//json//classmethods.json";
+		File file = new File(System.getProperty("user.dir")+"//src//test//resources//json//classmethods.json");;//put this in 
+		//config file
 		Map<String,String> classMethodsMap = new HashMap<String,String>();
 
 		JSONParser parser = new JSONParser();
-		JSONObject json=(JSONObject)parser.parse(new FileReader(new File(path)));
+		JSONObject json=(JSONObject)parser.parse(new FileReader(file));
 		
 		JSONArray classDetails =  (JSONArray)json.get("classdetails");
 		
