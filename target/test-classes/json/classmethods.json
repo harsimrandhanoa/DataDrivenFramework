@@ -1,8 +1,5 @@
 {
-    "key":"xxxxxx",
-    "key1":["xx","ss","uu"],
-    "key2":{"x":"y"},
-	"classdetails":[
+    "classdetails":[
 		{
 		 "class":"com.rediff.ddf.newtestcases.Session",
 		 "methods":["doLogin","doLogout"]

@@ -6,39 +6,27 @@ import org.testng.annotations.Test;
 import com.rediff.ddf.base.ApplicationKeywords;
 
 public class CreatePortfolioTest {
-	 ApplicationKeywords app;
-	
+	ApplicationKeywords app;
 
-    @Test
+	@Test
 	public void createPortFolioTest() {
-	   // no webdriver code
-       // login
-	   // create
-	   // verify
-		
-	   app = new ApplicationKeywords();// init prop
-	   
-	   app.openBrowser("Chrome");
-	   app.navigate("url");
-	   app.type("username_css", "ashishthakur1983");
-	   app.type("password_css", "pass@1234");
-	   app.validateElementPresent("loginButton_css");
-	   app.click("loginButton_css");
-	   app.validateLogin();
-	   //app.selectDateFromCalendar();	
+
+		app = new ApplicationKeywords();// init prop
+
+		app.openBrowser("Chrome");
+		app.navigate("url");
+		app.type("username_css", "abc");
+		app.type("password_css", "123");
+		app.validateElementPresent("loginButton_css");
+		app.click("loginButton_css");
+		app.validateLogin();
 	}
-    
-    @AfterMethod
-    public void quit(){
- 	   app.quit();
- }
-	
-	/*@Test
-	public void createReservation() {
-		
-	}*/
-	
 
+	@AfterMethod
+	public void quit() {
+		app.quit();
+	}
 
+	
 
 }

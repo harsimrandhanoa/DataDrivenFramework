@@ -4,18 +4,30 @@
   <parameter name="action" value="addstock"/>
   <parameter name="iteration" value="1"/>
   <parameter name="suitename" value="Stock Suite"/>
-  <parameter name="para1" value="paraval1"/>
-  <parameter name="action2" value="paraval1"/>
+  <parameter name="browserName" value="Chrome"/>
   <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//stockdata.json"/>
   <parameter name="dataflag" value="addexistingstock"/>
-  <test name="Add New Stock-New Stock-It.1(failed)">
+  <test name="Add New Stock-New Stock-It.1-Chrome(failed)">
     <parameter name="action" value="addstock"/>
     <parameter name="iteration" value="0"/>
     <parameter name="suitename" value="Stock Suite"/>
-    <parameter name="action2" value="paraval1"/>
+    <parameter name="browserName" value="Chrome"/>
     <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//stockdata.json"/>
     <parameter name="dataflag" value="addfreshstock"/>
     <classes>
+      <class name="com.rediff.ddf.newtestcases.StockManagement">
+        <methods>
+          <include name="verifyStockQuantity"/>
+          <include name="verifyStockPresent"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="addNewStock"/>
+          <include name="verifyTransactionHistory"/>
+        </methods>
+      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
       <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
         <methods>
           <include name="quit"/>
@@ -36,29 +48,29 @@
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
-      <class name="com.rediff.ddf.newtestcases.StockManagement">
-        <methods>
-          <include name="verifyStockQuantity"/>
-          <include name="verifyStockPresent"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="addNewStock"/>
-          <include name="verifyTransactionHistory"/>
-        </methods>
-      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
     </classes>
-  </test> <!-- Add New Stock-New Stock-It.1(failed) -->
-  <test name="Add New Stock-New Stock-It.2(failed)">
+  </test> <!-- Add New Stock-New Stock-It.1-Chrome(failed) -->
+  <test name="Add New Stock-New Stock-It.2-Chrome(failed)">
     <parameter name="action" value="addstock"/>
     <parameter name="iteration" value="1"/>
     <parameter name="suitename" value="Stock Suite"/>
-    <parameter name="action2" value="paraval1"/>
+    <parameter name="browserName" value="Chrome"/>
     <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//stockdata.json"/>
     <parameter name="dataflag" value="addfreshstock"/>
     <classes>
+      <class name="com.rediff.ddf.newtestcases.StockManagement">
+        <methods>
+          <include name="verifyStockQuantity"/>
+          <include name="verifyStockPresent"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="addNewStock"/>
+          <include name="verifyTransactionHistory"/>
+        </methods>
+      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
       <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
         <methods>
           <include name="quit"/>
@@ -79,29 +91,29 @@
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
-      <class name="com.rediff.ddf.newtestcases.StockManagement">
-        <methods>
-          <include name="verifyStockQuantity"/>
-          <include name="verifyStockPresent"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="addNewStock"/>
-          <include name="verifyTransactionHistory"/>
-        </methods>
-      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
     </classes>
-  </test> <!-- Add New Stock-New Stock-It.2(failed) -->
-  <test name="Modify Stock-Sell Existing Stock-It.1(failed)">
+  </test> <!-- Add New Stock-New Stock-It.2-Chrome(failed) -->
+  <test name="Modify Stock-Sell Existing Stock-It.1-Chrome(failed)">
     <parameter name="action" value="sellstock"/>
-    <parameter name="para1" value="paraval1"/>
     <parameter name="iteration" value="0"/>
     <parameter name="suitename" value="Stock Suite"/>
+    <parameter name="browserName" value="Chrome"/>
     <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//stockdata.json"/>
     <parameter name="dataflag" value="sellexistingstock"/>
     <classes>
+      <class name="com.rediff.ddf.newtestcases.StockManagement">
+        <methods>
+          <include name="modifyStock"/>
+          <include name="verifyStockQuantity"/>
+          <include name="verifyStockPresent"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="verifyTransactionHistory"/>
+        </methods>
+      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
       <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
         <methods>
           <include name="quit"/>
@@ -122,29 +134,29 @@
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
-      <class name="com.rediff.ddf.newtestcases.StockManagement">
-        <methods>
-          <include name="modifyStock"/>
-          <include name="verifyStockQuantity"/>
-          <include name="verifyStockPresent"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="verifyTransactionHistory"/>
-        </methods>
-      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
     </classes>
-  </test> <!-- Modify Stock-Sell Existing Stock-It.1(failed) -->
-  <test name="Modify Stock-Buy Existing Stock-It.1(failed)">
+  </test> <!-- Modify Stock-Sell Existing Stock-It.1-Chrome(failed) -->
+  <test name="Modify Stock-Buy Existing Stock-It.1-Chrome(failed)">
     <parameter name="action" value="addstock"/>
-    <parameter name="para1" value="paraval1"/>
     <parameter name="iteration" value="0"/>
     <parameter name="suitename" value="Stock Suite"/>
+    <parameter name="browserName" value="Chrome"/>
     <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//stockdata.json"/>
     <parameter name="dataflag" value="addexistingstock"/>
     <classes>
+      <class name="com.rediff.ddf.newtestcases.StockManagement">
+        <methods>
+          <include name="modifyStock"/>
+          <include name="verifyStockQuantity"/>
+          <include name="verifyStockPresent"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="verifyTransactionHistory"/>
+        </methods>
+      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
       <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
         <methods>
           <include name="quit"/>
@@ -165,29 +177,29 @@
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
-      <class name="com.rediff.ddf.newtestcases.StockManagement">
-        <methods>
-          <include name="modifyStock"/>
-          <include name="verifyStockQuantity"/>
-          <include name="verifyStockPresent"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="verifyTransactionHistory"/>
-        </methods>
-      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
     </classes>
-  </test> <!-- Modify Stock-Buy Existing Stock-It.1(failed) -->
-  <test name="Modify Stock-Buy Existing Stock-It.2(failed)">
+  </test> <!-- Modify Stock-Buy Existing Stock-It.1-Chrome(failed) -->
+  <test name="Modify Stock-Buy Existing Stock-It.2-Chrome(failed)">
     <parameter name="action" value="addstock"/>
-    <parameter name="para1" value="paraval1"/>
     <parameter name="iteration" value="1"/>
     <parameter name="suitename" value="Stock Suite"/>
+    <parameter name="browserName" value="Chrome"/>
     <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//stockdata.json"/>
     <parameter name="dataflag" value="addexistingstock"/>
     <classes>
+      <class name="com.rediff.ddf.newtestcases.StockManagement">
+        <methods>
+          <include name="modifyStock"/>
+          <include name="verifyStockQuantity"/>
+          <include name="verifyStockPresent"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="verifyTransactionHistory"/>
+        </methods>
+      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
       <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
         <methods>
           <include name="quit"/>
@@ -208,19 +220,6 @@
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
-      <class name="com.rediff.ddf.newtestcases.StockManagement">
-        <methods>
-          <include name="modifyStock"/>
-          <include name="verifyStockQuantity"/>
-          <include name="verifyStockPresent"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="verifyTransactionHistory"/>
-        </methods>
-      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
     </classes>
-  </test> <!-- Modify Stock-Buy Existing Stock-It.2(failed) -->
+  </test> <!-- Modify Stock-Buy Existing Stock-It.2-Chrome(failed) -->
 </suite> <!-- Failed suite [Stock Suite] -->

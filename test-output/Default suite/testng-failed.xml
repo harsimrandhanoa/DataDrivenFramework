@@ -3,16 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
+      <class name="com.rediff.ddf.newtestcases.Session">
         <methods>
-          <include name="selectPortfolio"/>
+          <include name="doLogin"/>
           <include name="beforeMethod"/>
           <include name="quit"/>
-          <include name="createPortfolio"/>
-          <include name="deletePortfolio"/>
           <include name="beforeTest"/>
         </methods>
-      </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
+      </class> <!-- com.rediff.ddf.newtestcases.Session -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

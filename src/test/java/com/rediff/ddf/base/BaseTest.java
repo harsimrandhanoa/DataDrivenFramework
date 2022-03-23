@@ -23,84 +23,74 @@ public class BaseTest {
 	public ApplicationKeywords app;
 	public ExtentReports rep;
 	public ExtentTest test;
-	
-	
+
 	@BeforeTest(alwaysRun = true)
-	public void beforeTest(ITestContext context) throws NumberFormatException, FileNotFoundException, IOException, ParseException {
-		System.out.println("----------Before Test will run before all the tests ---------");
-		
+	public void beforeTest(ITestContext context)
+			throws NumberFormatException, FileNotFoundException, IOException, ParseException {
+
 		String dataFilePath = context.getCurrentXmlTest().getParameter("datafilepath");
 		String dataFlag = context.getCurrentXmlTest().getParameter("dataflag");
-        String iteration = context.getCurrentXmlTest().getParameter("iteration");
-        String sheetName = context.getCurrentXmlTest().getParameter("suitename");
-        String browserName = context.getCurrentXmlTest().getParameter("browserName");
-        
+		String iteration = context.getCurrentXmlTest().getParameter("iteration");
+		String sheetName = context.getCurrentXmlTest().getParameter("suitename");
+		String browserName = context.getCurrentXmlTest().getParameter("browserName");
 
-	    JSONObject data = new DataUtil().getTestData(dataFilePath,dataFlag,Integer.parseInt(iteration));
-       
-       //To read data from excel
-       
-   //     JSONObject data =    new ReadDataSample().excelData(dataFilePath,sheetName,dataFlag,(Integer.parseInt(iteration)+1));
-        
-        
-        context.setAttribute("data",data);
+		JSONObject data = new DataUtil().getTestData(dataFilePath, dataFlag, Integer.parseInt(iteration));
 
-        
-        String runmode = (String)data.get("runmode");
+		// To read data from excel
 
+		// JSONObject data = new ReadDataSample().excelData(dataFilePath,sheetName,dataFlag,(Integer.parseInt(iteration)+1));
 
-        rep = ExtentManager.getReports();          //made object of rep
-		System.out.println("The name is test is "+context.getCurrentXmlTest().getName());
-		test =rep.createTest(context.getCurrentXmlTest().getName()); //made object of test
-		test.log(Status.INFO, "Starting Test "+context.getCurrentXmlTest().getName());
-		test.log(Status.INFO, "Data "+data.toString());
+		context.setAttribute("data", data);
 
-		
-		context.setAttribute("report", rep); //set rep and test objects in context
+		String runmode = (String) data.get("runmode");
+
+		rep = ExtentManager.getReports(); // made object of rep
+		test = rep.createTest(context.getCurrentXmlTest().getName()); // made object of test
+		test.log(Status.INFO, "Starting Test " + context.getCurrentXmlTest().getName());
+		test.log(Status.INFO, "Data " + data.toString());
+
+		context.setAttribute("report", rep); // set rep and test objects in context
 		context.setAttribute("test", test);
-		
-		
-		 if(runmode.equals("N")){
-			 
-			 test.log(Status.SKIP,"Skipping as runmod is N");
-			 throw new SkipException("Skipping as runmod is N");
-	        	
-	       }
 
-		
+		if (runmode.equals("N")) {
+
+			test.log(Status.SKIP, "Skipping as runmod is N");
+			throw new SkipException("Skipping as runmod is N");
+
+		}
+
 		app = new ApplicationKeywords(); // 1 app keyword object for entire test -All @Test
-        app.setReport(test); //passed the test  object created above to ApplicationKeywords Class
-        context.setAttribute("app", app); //set object of app
-        app.defaultLogin(browserName);		
-		
- 	}
-	
+		app.setReport(test); // passed the test object created above to ApplicationKeywords Class
+		context.setAttribute("app", app); // set object of app
+		app.defaultLogin(browserName);
+
+	}
+
 	@BeforeMethod(alwaysRun = true)
 	public void beforeMethod(ITestContext context) {
 
-		String criticalFailure = (String)context.getAttribute("criticalFailure");
-		if(criticalFailure != null && criticalFailure.equals("Y")) {
-            throw new SkipException("Critical Failure in Prevoius Tests");// skip in testNG
+		String criticalFailure = (String) context.getAttribute("criticalFailure");
+		if (criticalFailure != null && criticalFailure.equals("Y")) {
+			throw new SkipException("Critical Failure in Prevoius Tests");// skip in testNG
 		}
-		 
-		//Use these variables set in before test in each method 
-		
-	     app = (ApplicationKeywords)context.getAttribute("app");
-		 test = (ExtentTest)context.getAttribute("test");
-		 rep = (ExtentReports)context.getAttribute("report");
+
+		// Use these variables set in before test in each method
+
+		app = (ApplicationKeywords) context.getAttribute("app");
+		test = (ExtentTest) context.getAttribute("test");
+		rep = (ExtentReports) context.getAttribute("report");
 	}
-	
-	
+
 	@AfterTest(alwaysRun = true)
 	public void quit(ITestContext context) {
 
-		app = (ApplicationKeywords)context.getAttribute("app");
-		if(app!=null)
+		app = (ApplicationKeywords) context.getAttribute("app");
+		if (app != null)
 			app.quit();
-		
-		rep = (ExtentReports)context.getAttribute("report");
 
-		if(rep !=null)
+		rep = (ExtentReports) context.getAttribute("report");
+
+		if (rep != null)
 			rep.flush();
 	}
 

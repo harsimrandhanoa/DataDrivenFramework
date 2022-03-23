@@ -1,37 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [PortFolio Suite (0)]">
-  <parameter name="browser" value="chrome"/>
-  <parameter name="action" value="createport"/>
+<suite name="Failed suite [Stock Suite]">
+  <parameter name="action" value="addstock"/>
   <parameter name="iteration" value="1"/>
-  <parameter name="suitename" value="PortFolio Suite"/>
-  <parameter name="browserName" value="Mozilla"/>
-  <parameter name="localpara1" value="localval1"/>
-  <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//portfoliodata.json"/>
-  <parameter name="dataflag" value="deleteportfolio"/>
-  <listeners>
-    <listener class-name="listeners.MyTestNGListener"/>
-  </listeners>
-  <test name="Create Portfolio-Create New PortFolio-pos-It.1-Mozilla(failed)">
-    <parameter name="browser" value="chrome"/>
-    <parameter name="action" value="createport"/>
+  <parameter name="suitename" value="Stock Suite"/>
+  <parameter name="browserName" value="Chrome"/>
+  <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//stockdata.json"/>
+  <parameter name="dataflag" value="addexistingstock"/>
+  <test name="Add New Stock-New Stock-It.1-Chrome(failed)">
+    <parameter name="action" value="addstock"/>
     <parameter name="iteration" value="0"/>
-    <parameter name="suitename" value="PortFolio Suite"/>
-    <parameter name="browserName" value="Mozilla"/>
-    <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//portfoliodata.json"/>
-    <parameter name="dataflag" value="createnewportfolio"/>
+    <parameter name="suitename" value="Stock Suite"/>
+    <parameter name="browserName" value="Chrome"/>
+    <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//stockdata.json"/>
+    <parameter name="dataflag" value="addfreshstock"/>
     <classes>
+      <class name="com.rediff.ddf.newtestcases.StockManagement">
+        <methods>
+          <include name="verifyStockQuantity"/>
+          <include name="verifyStockPresent"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="addNewStock"/>
+          <include name="verifyTransactionHistory"/>
+        </methods>
+      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
       <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
         <methods>
           <include name="quit"/>
           <include name="quit"/>
           <include name="quit"/>
           <include name="quit"/>
-          <include name="createPortfolio" invocation-numbers="0"/>
+          <include name="quit"/>
           <include name="beforeTest"/>
           <include name="beforeTest"/>
           <include name="beforeTest"/>
           <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="selectPortfolio"/>
+          <include name="beforeMethod"/>
           <include name="beforeMethod"/>
           <include name="beforeMethod"/>
           <include name="beforeMethod"/>
@@ -39,27 +49,42 @@
         </methods>
       </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
     </classes>
-  </test> <!-- Create Portfolio-Create New PortFolio-pos-It.1-Mozilla(failed) -->
-  <test name="Create Portfolio-Create New PortFolio-pos-It.2-Mozilla(failed)">
-    <parameter name="browser" value="chrome"/>
-    <parameter name="action" value="createport"/>
+  </test> <!-- Add New Stock-New Stock-It.1-Chrome(failed) -->
+  <test name="Add New Stock-New Stock-It.2-Chrome(failed)">
+    <parameter name="action" value="addstock"/>
     <parameter name="iteration" value="1"/>
-    <parameter name="suitename" value="PortFolio Suite"/>
-    <parameter name="browserName" value="Mozilla"/>
-    <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//portfoliodata.json"/>
-    <parameter name="dataflag" value="createnewportfolio"/>
+    <parameter name="suitename" value="Stock Suite"/>
+    <parameter name="browserName" value="Chrome"/>
+    <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//stockdata.json"/>
+    <parameter name="dataflag" value="addfreshstock"/>
     <classes>
+      <class name="com.rediff.ddf.newtestcases.StockManagement">
+        <methods>
+          <include name="verifyStockQuantity"/>
+          <include name="verifyStockPresent"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="addNewStock"/>
+          <include name="verifyTransactionHistory"/>
+        </methods>
+      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
       <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
         <methods>
           <include name="quit"/>
           <include name="quit"/>
           <include name="quit"/>
           <include name="quit"/>
-          <include name="createPortfolio"/>
+          <include name="quit"/>
           <include name="beforeTest"/>
           <include name="beforeTest"/>
           <include name="beforeTest"/>
           <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="selectPortfolio"/>
+          <include name="beforeMethod"/>
           <include name="beforeMethod"/>
           <include name="beforeMethod"/>
           <include name="beforeMethod"/>
@@ -67,26 +92,128 @@
         </methods>
       </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
     </classes>
-  </test> <!-- Create Portfolio-Create New PortFolio-pos-It.2-Mozilla(failed) -->
-  <test name="Delete Portfolio-Delete Existing PortFolio-It.2-Mozilla(failed)">
+  </test> <!-- Add New Stock-New Stock-It.2-Chrome(failed) -->
+  <test name="Modify Stock-Sell Existing Stock-It.1-Chrome(failed)">
+    <parameter name="action" value="sellstock"/>
+    <parameter name="iteration" value="0"/>
+    <parameter name="suitename" value="Stock Suite"/>
+    <parameter name="browserName" value="Chrome"/>
+    <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//stockdata.json"/>
+    <parameter name="dataflag" value="sellexistingstock"/>
+    <classes>
+      <class name="com.rediff.ddf.newtestcases.StockManagement">
+        <methods>
+          <include name="modifyStock"/>
+          <include name="verifyStockQuantity"/>
+          <include name="verifyStockPresent"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="verifyTransactionHistory"/>
+        </methods>
+      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
+      <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
+        <methods>
+          <include name="quit"/>
+          <include name="quit"/>
+          <include name="quit"/>
+          <include name="quit"/>
+          <include name="quit"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="selectPortfolio"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
+    </classes>
+  </test> <!-- Modify Stock-Sell Existing Stock-It.1-Chrome(failed) -->
+  <test name="Modify Stock-Buy Existing Stock-It.1-Chrome(failed)">
+    <parameter name="action" value="addstock"/>
+    <parameter name="iteration" value="0"/>
+    <parameter name="suitename" value="Stock Suite"/>
+    <parameter name="browserName" value="Chrome"/>
+    <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//stockdata.json"/>
+    <parameter name="dataflag" value="addexistingstock"/>
+    <classes>
+      <class name="com.rediff.ddf.newtestcases.StockManagement">
+        <methods>
+          <include name="modifyStock"/>
+          <include name="verifyStockQuantity"/>
+          <include name="verifyStockPresent"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="verifyTransactionHistory"/>
+        </methods>
+      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
+      <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
+        <methods>
+          <include name="quit"/>
+          <include name="quit"/>
+          <include name="quit"/>
+          <include name="quit"/>
+          <include name="quit"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="selectPortfolio"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
+    </classes>
+  </test> <!-- Modify Stock-Buy Existing Stock-It.1-Chrome(failed) -->
+  <test name="Modify Stock-Buy Existing Stock-It.2-Chrome(failed)">
+    <parameter name="action" value="addstock"/>
     <parameter name="iteration" value="1"/>
-    <parameter name="suitename" value="PortFolio Suite"/>
-    <parameter name="browserName" value="Mozilla"/>
-    <parameter name="localpara1" value="localval1"/>
-    <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//portfoliodata.json"/>
-    <parameter name="dataflag" value="deleteportfolio"/>
+    <parameter name="suitename" value="Stock Suite"/>
+    <parameter name="browserName" value="Chrome"/>
+    <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//stockdata.json"/>
+    <parameter name="dataflag" value="addexistingstock"/>
     <classes>
+      <class name="com.rediff.ddf.newtestcases.StockManagement">
+        <methods>
+          <include name="modifyStock"/>
+          <include name="verifyStockQuantity"/>
+          <include name="verifyStockPresent"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeMethod"/>
+          <include name="verifyTransactionHistory"/>
+        </methods>
+      </class> <!-- com.rediff.ddf.newtestcases.StockManagement -->
       <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
         <methods>
           <include name="quit"/>
           <include name="quit"/>
           <include name="quit"/>
           <include name="quit"/>
-          <include name="deletePortfolio"/>
+          <include name="quit"/>
           <include name="beforeTest"/>
           <include name="beforeTest"/>
           <include name="beforeTest"/>
           <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="selectPortfolio"/>
+          <include name="beforeMethod"/>
           <include name="beforeMethod"/>
           <include name="beforeMethod"/>
           <include name="beforeMethod"/>
@@ -94,5 +221,5 @@
         </methods>
       </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
     </classes>
-  </test> <!-- Delete Portfolio-Delete Existing PortFolio-It.2-Mozilla(failed) -->
-</suite> <!-- Failed suite [PortFolio Suite (0)] -->
+  </test> <!-- Modify Stock-Buy Existing Stock-It.2-Chrome(failed) -->
+</suite> <!-- Failed suite [Stock Suite] -->

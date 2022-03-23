@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [PortFolio Suite (0)]">
-  <parameter name="browser" value="chrome"/>
-  <parameter name="action" value="createport"/>
-  <parameter name="iteration" value="1"/>
-  <parameter name="suitename" value="PortFolio Suite"/>
-  <parameter name="browserName" value="Mozilla"/>
-  <parameter name="localpara1" value="localval1"/>
-  <parameter name="datafilepath" value="C:\workspace\DataDrivenProject2021//src//test//resources//json//data//portfoliodata.json"/>
-  <parameter name="dataflag" value="deleteportfolio"/>
   <listeners>
     <listener class-name="listeners.MyTestNGListener"/>
   </listeners>
-  <test name="Create Portfolio-Create New PortFolio-pos-It.1-Mozilla(failed)">
+  <test thread-count="5" name="Create Portfolio-Create New PortFolio-pos-It.1-Mozilla(failed)">
     <parameter name="browser" value="chrome"/>
     <parameter name="action" value="createport"/>
     <parameter name="iteration" value="0"/>
@@ -24,23 +16,14 @@
       <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
         <methods>
           <include name="quit"/>
-          <include name="quit"/>
-          <include name="quit"/>
-          <include name="quit"/>
+          <include name="beforeMethod"/>
           <include name="createPortfolio" invocation-numbers="0"/>
           <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
     </classes>
   </test> <!-- Create Portfolio-Create New PortFolio-pos-It.1-Mozilla(failed) -->
-  <test name="Create Portfolio-Create New PortFolio-pos-It.2-Mozilla(failed)">
+  <test thread-count="5" name="Create Portfolio-Create New PortFolio-pos-It.2-Mozilla(failed)">
     <parameter name="browser" value="chrome"/>
     <parameter name="action" value="createport"/>
     <parameter name="iteration" value="1"/>
@@ -52,23 +35,14 @@
       <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
         <methods>
           <include name="quit"/>
-          <include name="quit"/>
-          <include name="quit"/>
-          <include name="quit"/>
+          <include name="beforeMethod"/>
           <include name="createPortfolio"/>
           <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
     </classes>
   </test> <!-- Create Portfolio-Create New PortFolio-pos-It.2-Mozilla(failed) -->
-  <test name="Delete Portfolio-Delete Existing PortFolio-It.2-Mozilla(failed)">
+  <test thread-count="5" name="Delete Portfolio-Delete Existing PortFolio-It.2-Mozilla(failed)">
     <parameter name="iteration" value="1"/>
     <parameter name="suitename" value="PortFolio Suite"/>
     <parameter name="browserName" value="Mozilla"/>
@@ -79,18 +53,9 @@
       <class name="com.rediff.ddf.newtestcases.PortfolioManagement">
         <methods>
           <include name="quit"/>
-          <include name="quit"/>
-          <include name="quit"/>
-          <include name="quit"/>
+          <include name="beforeMethod"/>
           <include name="deletePortfolio"/>
           <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeTest"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeMethod"/>
         </methods>
       </class> <!-- com.rediff.ddf.newtestcases.PortfolioManagement -->
     </classes>

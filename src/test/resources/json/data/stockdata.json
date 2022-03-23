@@ -5,7 +5,7 @@
 	    "data":[
 	     {
 	     "portfolioname":"Cat",
-	     "stockname":"Birla Corporation Ltd",
+	     "stockname":"Birla Corporation Ltd.",
 	     "date":"12-12-2020",
 	     "quantity":"100",
 	     "price":"200",
@@ -13,8 +13,8 @@
 	     },
 	     {
 	     "portfolioname":"Cat",
-	     "stockname":"Reliance Industries Ltd",
-	     "date":"21-12-2021",
+	     "stockname":"Reliance Industries Ltd.",
+	     "date":"21-12-2019",
 	     "quantity":"200",
 	     "price":"400",
 	     "runmode":"N"
@@ -26,11 +26,11 @@
 	    "data":[
 	     {
 	     "portfolioname":"Cat",
-	     "stockname":"Birla Corporation Ltd",
+	     "stockname":"Birla Corporation Ltd.",
 	     "date":"12-12-2020",
 	     "quantity":"100",
 	     "price":"200",
-	     "runmode":"N"
+	     "runmode":"Y"
 	     },
 	      {
 	      "portfolioname":"Cat",
@@ -47,11 +47,11 @@
 	    "data":[
 	     {
 	     "portfolioname":"Cat",
-	     "stockname":"Birla Corporation Ltd",
+	     "stockname":"Birla Corporation Ltd.",
 	     "date":"12-12-2020",
 	     "quantity":"100",
 	     "price":"200",
-	     "runmode":"N"
+	     "runmode":"Y"
 	     }
 	    ]		
 	}

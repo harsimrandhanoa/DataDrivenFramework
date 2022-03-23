@@ -1,5 +1,5 @@
 {
-"browsers":["Chrome","Mozilla"],
+"browsers":["Chrome"],
 "parallelsuites":"1",
 "testsuites":[
 	{
@@ -11,7 +11,7 @@
 	 "paralleltests":"N"
 	},
 	{
-	 "runmode":"N",
+	 "runmode":"Y",
 	 "name":"Stock Suite",
 	 "testdatajsonfile":"data//stockdata.json",
 	 "testdataxlsfile":"xls_data//Data.xlsx",

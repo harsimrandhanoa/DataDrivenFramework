@@ -9,25 +9,26 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverOptions {
 
-	
-	public static ChromeDriver getChromeDriver(Properties prop){
-		System.setProperty("webdriver.chrome.driver", prop.getProperty("chromedriver"));
+	public static ChromeDriver getChromeDriver(Properties prop) {
+		String chromeDriverLocation =  System.getProperty("user.dir") +prop.getProperty("chromedriver");
+		System.setProperty("webdriver.chrome.driver",chromeDriverLocation);
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("start-maximized");
 		options.addArguments("disable-infobards");
-        ChromeDriver driver = new ChromeDriver(options);
+		ChromeDriver driver = new ChromeDriver(options);
 		return driver;
 	}
-	
-	public static FirefoxDriver getFirefoxDriver(Properties prop){
-        System.setProperty("webdriver.gecko.driver", prop.getProperty("firefoxdriver"));
-	    return new FirefoxDriver();
+
+	public static FirefoxDriver getFirefoxDriver(Properties prop) {
+		String firefoxDriverLocation =  System.getProperty("user.dir") + prop.getProperty("firefoxdriver");
+        System.setProperty("webdriver.gecko.driver",firefoxDriverLocation);
+		return new FirefoxDriver();
 	}
-	
-	public static EdgeDriver getEdgeDriver(Properties prop){
-	    System.setProperty("webdriver.ie.driver", prop.getProperty("edgedriver"));
+
+	public static EdgeDriver getEdgeDriver(Properties prop) {
+		String edgeDriverLocation =  System.getProperty("user.dir") + prop.getProperty("edgedriver");
+        System.setProperty("webdriver.ie.driver", edgeDriverLocation);
 		return new EdgeDriver();
 	}
-	
 
 }
