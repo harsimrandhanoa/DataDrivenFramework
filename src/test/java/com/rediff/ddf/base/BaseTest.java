@@ -59,8 +59,8 @@ public class BaseTest {
 
 		}
 
-		app = new ApplicationKeywords(); // 1 app keyword object for entire test -All @Test
-		app.setReport(test); // passed the test object created above to ApplicationKeywords Class
+		app = new ApplicationKeywords(test); // 1 app keyword object for entire test -All @Test
+		//app.setReport(test); // passed the test object created above to ApplicationKeywords Class
 		context.setAttribute("app", app); // set object of app
 		app.defaultLogin(browserName);
 
@@ -77,19 +77,13 @@ public class BaseTest {
 		// Use these variables set in before test in each method
 
 		app = (ApplicationKeywords) context.getAttribute("app");
-		test = (ExtentTest) context.getAttribute("test");
-		rep = (ExtentReports) context.getAttribute("report");
 	}
 
 	@AfterTest(alwaysRun = true)
 	public void quit(ITestContext context) {
 
-		app = (ApplicationKeywords) context.getAttribute("app");
 		if (app != null)
 			app.quit();
-
-		rep = (ExtentReports) context.getAttribute("report");
-
 		if (rep != null)
 			rep.flush();
 	}

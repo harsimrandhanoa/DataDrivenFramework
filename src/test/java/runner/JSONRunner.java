@@ -18,7 +18,7 @@ public class JSONRunner {
 
 		JSONObject json = jsonRunnerHelper.getTestConfigObject();
 
-		TestNGRunner testNG = jsonRunnerHelper.createTestNgRunner(json);
+		TestNGRunner testNG = jsonRunnerHelper.createTestNgRunner(json);//create runner
 
 		JSONArray browsersArray = jsonRunnerHelper.getBrowsersArray(json);
 
@@ -35,10 +35,10 @@ public class JSONRunner {
 				
 				
 			   if (!testSuiteData.isEmpty()) {
-					jsonRunnerHelper.addSuiteToRunner(testNG, testSuiteData);
+					jsonRunnerHelper.addSuiteToRunner(testNG, testSuiteData); //add test suite to runner
 
 					if (tsId == 0)
-						jsonRunnerHelper.addTestNGListener(testNG);
+						jsonRunnerHelper.addTestNGListener(testNG); //add listener for very first suite
 
 					JSONArray suiteTestCases = jsonRunnerHelper.getTestCasesFromSuite(testSuiteData);
 
@@ -74,7 +74,7 @@ public class JSONRunner {
 									JSONArray methods = (JSONArray) executionData.get("methods");
 
 									testNG.addTest(testCaseData.get("testName") + "-" + executionName + "-It."
-											+ (dsId + 1) + "-" + browserName);
+											+ (dsId + 1) + "-" + browserName); //adding a test case to suite
 
 									jsonRunnerHelper.addParametersToRunner(testNG,
 											(JSONArray) testCaseData.get("parameterNames"), parametervalues);
@@ -91,13 +91,13 @@ public class JSONRunner {
 
 									jsonRunnerHelper.addMethods(testNG, methods, classMethods);
 
-								}
-							}
-						}
-					}
-				} // for loop for test suites ends
-			}
-		}
+								} //for loop for data sets in portfoliodata or suitedata
+							} //if for runmode in executions in portfoliosuite or stocksuite
+						}//for loop for executions in portfoiosuite ends
+					} //for loop for test cases in portfoliosuite or stocksuite ends
+				} 
+			}// for loop for test suites ends
+		} //for loop for browsers in testconfig ends
 		testNG.run();
 
 	}

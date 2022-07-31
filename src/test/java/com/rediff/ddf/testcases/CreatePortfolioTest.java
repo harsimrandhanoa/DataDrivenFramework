@@ -11,15 +11,15 @@ public class CreatePortfolioTest {
 	@Test
 	public void createPortFolioTest() {
 
-		app = new ApplicationKeywords();// init prop
-
-		app.openBrowser("Chrome");
-		app.navigate("url");
-		app.type("username_css", "abc");
-		app.type("password_css", "123");
-		app.validateElementPresent("loginButton_css");
-		app.click("loginButton_css");
-		app.validateLogin();
+//		app = new ApplicationKeywords();// init prop
+//
+//		app.openBrowser("Chrome");
+//		app.navigate("url");
+//		app.type("username_css", "abc");
+//		app.type("password_css", "123");
+//		app.validateElementPresent("loginButton_css");
+//		app.click("loginButton_css");
+//		app.validateLogin();
 	}
 
 	@AfterMethod

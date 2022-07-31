@@ -12,7 +12,8 @@ import com.aventstack.extentreports.ExtentTest;
 
 public class ApplicationKeywords extends ValidationKeywords {
 
-	public ApplicationKeywords() {
+	public ApplicationKeywords(ExtentTest test) {
+		this.test = test;
 		String path = System.getProperty("user.dir") + "//src//test//resources//env.properties";
 		prop = new Properties();
 		envProp = new Properties();
@@ -35,7 +36,7 @@ public class ApplicationKeywords extends ValidationKeywords {
 
 		log("Logging In");
 		openBrowser(browser);
-
+        log("Browser "+browser+" opened");
 		navigate("url");
 
 		String username = envProp.getProperty("username");
@@ -47,7 +48,6 @@ public class ApplicationKeywords extends ValidationKeywords {
 		validateElementPresent("loginButton_css");
 		click("loginButton_css");
 		validateLogin();
-
 	}
 
 	public void selectDateFromCalendar(String date) {
